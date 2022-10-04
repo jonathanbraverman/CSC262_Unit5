@@ -1,0 +1,63 @@
+// Converting Animal to an abstract class
+
+abstract class Animal3 {
+    name : string;
+    legs : number; 
+    constructor(theName : string){
+        this.name = theName;
+    }
+    move(distanceInMeters: number = 0){
+        console.log("Animal moved " + distanceInMeters + " meters")
+    }
+    abstract makeSound(): void; // must be implemented in a derived class
+}
+
+
+// Inheritance Example 2 - Overloading constructor and method
+class Dog3 extends Animal3 {
+    constructor(theName: string){
+        super(theName);
+        this.legs = 4;  // We can set the number of legs since we know what this animal has
+    }
+    makeSound() {     //bark()
+        console.log("Woof! Woof!")
+    }
+    move(distanceInMeters: number = 5){
+        console.log("Dog moved " + distanceInMeters + " meters")
+    }        
+}
+
+class Human extends Animal3 {
+    constructor(theName: string){
+        super(theName);
+        this.legs = 2;  // We can set the number of legs since we know what this animal has
+    }
+    makeSound() {     //speak() {
+        console.log("Ahem!, Ahem!")
+    }
+    move(distanceInMeters: number = 1){
+        console.log("The human...")
+        super.move(distanceInMeters)
+    }     
+}
+
+function testAnimal2(){
+    //const generic : Animal3 = new Animal3("?"); // not allowed
+    const Lassie : Dog3 = new Dog3("Barky");
+    const Steve : Human = new Human("Steve");
+
+    Lassie.makeSound(); //Lassie.bark();
+    Lassie.move();
+    Lassie.move(10);
+
+    Steve.makeSound();  //Steve.speak();
+    Steve.move(2);
+
+    // console.log("\nGeneric Animal class still works")
+    // generic.move();
+    //generic.bark();  // Generates an error
+
+
+}
+
+testAnimal2()
