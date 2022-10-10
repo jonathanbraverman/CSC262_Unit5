@@ -1,6 +1,6 @@
 // Declare a new class "Greeter5".
 // It has three members, properties (strings called greeting & name), a constructor, a method greet(), and a method saygoodbye()
-// public by default, except name
+// public by default, except nametsc -t es5 
 // static property - part of the class itself
 class Greeter5 {  
     static job  : string = "Greeting"
@@ -12,6 +12,7 @@ class Greeter5 {
         this.greeting = greeting;
         this.name = name;
         this.farewell = farewell;
+        Greeter5.job = "Greeting!"
     }
 
     // Accessors are only available when targeting ECMAScript 5 and higher. tsc -t es5

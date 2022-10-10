@@ -1,4 +1,4 @@
-// requires compiling with tsc -t es5 .\import.ts
+// requires compiling with tsc -t 'es5' .\import.ts
 
 import { genericClass } from "./export";
 

@@ -22,6 +22,7 @@ var Greeter5 = /** @class */ (function () {
         this.greeting = greeting;
         this.name = name;
         this.farewell = farewell;
+        Greeter5.job = "Greeting!";
     }
     Object.defineProperty(Greeter5.prototype, "greetername", {
         // Accessors are only available when targeting ECMAScript 5 and higher. tsc -t es5
