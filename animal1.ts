@@ -26,7 +26,7 @@ function testAnimal(){
     Lassie.move(5);
 
     generic.move(10);
-    //generic.bark();  // Generates an error
+    generic.bark();  // Generates an error
 }
 
 testAnimal()

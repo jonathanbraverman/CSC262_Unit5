@@ -13,15 +13,15 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var Animal2 = /** @class */ (function () {
-    function Animal2(theName) {
+var Animal = /** @class */ (function () {
+    function Animal(theName) {
         this.name = theName;
     }
-    Animal2.prototype.move = function (distanceInMeters) {
+    Animal.prototype.move = function (distanceInMeters) {
         if (distanceInMeters === void 0) { distanceInMeters = 0; }
         console.log("Animal moved " + distanceInMeters + " meters");
     };
-    return Animal2;
+    return Animal;
 }());
 // Inheritance Example 2 - Overloading constructor and method
 var Dog2 = /** @class */ (function (_super) {
@@ -39,7 +39,7 @@ var Dog2 = /** @class */ (function (_super) {
         console.log("Dog moved " + distanceInMeters + " meters");
     };
     return Dog2;
-}(Animal2));
+}(Animal));
 var Human = /** @class */ (function (_super) {
     __extends(Human, _super);
     function Human(theName) {
@@ -52,13 +52,13 @@ var Human = /** @class */ (function (_super) {
     };
     Human.prototype.move = function (distanceInMeters) {
         if (distanceInMeters === void 0) { distanceInMeters = 1; }
-        console.log("The human");
+        console.log("The human...");
         _super.prototype.move.call(this, distanceInMeters);
     };
     return Human;
-}(Animal2));
+}(Animal));
 function testAnimal2() {
-    var generic = new Animal2("?");
+    var generic = new Animal("?");
     var Lassie = new Dog2("Barky");
     var Steve = new Human("Steve");
     Lassie.bark();
@@ -66,7 +66,8 @@ function testAnimal2() {
     Lassie.move(10);
     Steve.speak();
     Steve.move(2);
-    generic.move(10);
+    console.log("\nGeneric Animal class still works");
+    generic.move();
     //generic.bark();  // Generates an error
 }
 testAnimal2();

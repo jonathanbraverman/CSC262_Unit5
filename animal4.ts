@@ -1,11 +1,6 @@
 namespace animal4{
-interface tail {
-    waggingState : string;
-}
 
-interface eyebrows {
-    eyebrowState : string;
-}
+
 
 abstract class Animal4 {
     name : string;
@@ -19,6 +14,14 @@ abstract class Animal4 {
     abstract makeSound(): void; // must be implemented in a derived class
 }
 
+interface tail {
+    waggingState : string;
+    wag: ()=>string 
+}
+
+interface eyebrows {
+    eyebrowState : string;
+}
 
 // Inheritance Example 2 - Overloading constructor and method
 class Dog4 extends Animal4 implements tail {
@@ -33,7 +36,11 @@ class Dog4 extends Animal4 implements tail {
     }
     move(distanceInMeters: number = 5){
         console.log("Dog moved " + distanceInMeters + " meters")
-    }        
+    } 
+    wag()
+    {
+        return "wagging...";
+    }       
 }
 
 class Human extends Animal4 implements eyebrows {

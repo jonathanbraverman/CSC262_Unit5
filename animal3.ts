@@ -9,7 +9,7 @@ abstract class Animal3 {
     move(distanceInMeters: number = 0){
         console.log("Animal moved " + distanceInMeters + " meters")
     }
-    abstract makeSound(): void; // must be implemented in a derived class
+    abstract makeSound(sound : any): boolean; // must be implemented in a derived class
 }
 
 
@@ -21,6 +21,7 @@ class Dog3 extends Animal3 {
     }
     makeSound() {     //bark()
         console.log("Woof! Woof!")
+        return true
     }
     move(distanceInMeters: number = 5){
         console.log("Dog moved " + distanceInMeters + " meters")

@@ -24,7 +24,7 @@ class Dog2 extends Animal {
     }        
 }
 
-class Human extends Animal {
+class Human2 extends Animal {
     constructor(theName: string){
         super(theName);
         this.legs = 2;  // We can set the number of legs since we know what this animal has
@@ -38,14 +38,14 @@ class Human extends Animal {
     }     
 }
 
-function testAnimal2(){
+function testAnimal22(){
     const generic : Animal = new Animal("?");
-    const Lassie : Dog2 = new Dog2("Barky");
-    const Steve : Human = new Human("Steve");
+    const Barky : Dog2 = new Dog2("Barky");
+    const Steve : Human2 = new Human2("Steve");
 
-    Lassie.bark();
-    Lassie.move();
-    Lassie.move(10);
+    Barky.bark();
+    Barky.move();
+    Barky.move(10);
 
     Steve.speak();
     Steve.move(2);
