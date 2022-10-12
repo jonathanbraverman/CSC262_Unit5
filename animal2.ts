@@ -1,4 +1,4 @@
-class Animal2 {
+class Animal {
     name : string;
     legs : number; 
     constructor(theName : string){
@@ -11,7 +11,7 @@ class Animal2 {
 
 
 // Inheritance Example 2 - Overloading constructor and method
-class Dog2 extends Animal2 {
+class Dog2 extends Animal {
     constructor(theName: string){
         super(theName);
         this.legs = 4;  // We can set the number of legs since we know what this animal has
@@ -24,7 +24,7 @@ class Dog2 extends Animal2 {
     }        
 }
 
-class Human extends Animal2 {
+class Human extends Animal {
     constructor(theName: string){
         super(theName);
         this.legs = 2;  // We can set the number of legs since we know what this animal has
@@ -39,7 +39,7 @@ class Human extends Animal2 {
 }
 
 function testAnimal2(){
-    const generic : Animal2 = new Animal2("?");
+    const generic : Animal = new Animal("?");
     const Lassie : Dog2 = new Dog2("Barky");
     const Steve : Human = new Human("Steve");
 

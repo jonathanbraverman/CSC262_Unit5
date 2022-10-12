@@ -10,6 +10,7 @@ class fur {
 
 interface tail {
     waggingState : string;
+    wag: ()=>string 
 }
 
 interface eyebrows {
@@ -47,7 +48,11 @@ class Dog4 extends Animal4 implements tail {
     move(distanceInMeters: number = 5){
         console.log("Dog moved " + distanceInMeters + " meters")
     }        
+    wag(): string {
+        return this.waggingState;
+    }
 }
+
 
 class Human extends Animal4 implements eyebrows {
     eyebrowState: string;

@@ -44,7 +44,7 @@ class Human extends Animal3 {
 function testAnimal2(){
     //const generic : Animal3 = new Animal3("?"); // not allowed
     const Lassie : Dog3 = new Dog3("Barky");
-    const Steve : Human = new Human("Steve");
+    const Steve : Human = new Human("Steve");    
 
     Lassie.makeSound(); //Lassie.bark();
     Lassie.move();

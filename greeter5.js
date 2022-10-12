@@ -15,7 +15,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 // Declare a new class "Greeter5".
 // It has three members, properties (strings called greeting & name), a constructor, a method greet(), and a method saygoodbye()
-// public by default, except name
+// public by default, except name  tsc -t es5 
 // static property - part of the class itself
 var Greeter5 = /** @class */ (function () {
     function Greeter5(greeting, name, farewell) {

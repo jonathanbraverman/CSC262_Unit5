@@ -1,3 +1,4 @@
+namespace animal4{
 interface tail {
     waggingState : string;
 }
@@ -73,3 +74,4 @@ function testAnimal4(){
 }
 
 testAnimal4()
+}

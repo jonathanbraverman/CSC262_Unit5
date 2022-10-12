@@ -1,3 +1,5 @@
+namespace animal1{
+
 class Animal {
     name : string;
     legs : number;
@@ -28,3 +30,4 @@ function testAnimal(){
 }
 
 testAnimal()
+}

@@ -3,7 +3,7 @@
 // public by default, except name
 class Greeter4 {  
     greeting : string;  
-    private name : string;  
+    protected name : string;  
     farewell: string;
 
     constructor(greeting : string, name: string, farewell: string){  // this could be protected as well to prevent non-derived class instantiation
@@ -36,7 +36,7 @@ function test4()
     Avery.greet();
     Avery.saygoodbye();
 
-    //console.log("I can't see Avery's name" + Avery.name)      // Still can't see the protected member outside of the class/objects
+    console.log("I can't see Avery's name" + Avery.name)      // Still can't see the protected member outside of the class/objects
     
 }
 

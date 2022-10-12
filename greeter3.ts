@@ -2,8 +2,8 @@
 // It has three members, properties (strings called greeting & name), a constructor, a method greet(), and a method saygoodbye()
 // public by default
 class Greeter3 {  
-    greeting : string;  
-    name : string;  // make this private and see the effect
+    public greeting : string;  
+    private name : string;  // make this private and see the effect
     farewell: string;
 
     constructor(greeting : string, name: string, farewell: string){
